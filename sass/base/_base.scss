@@ -1,0 +1,20 @@
+*,
+*::after,
+*::before
+{
+  margin : 0;
+  padding : 0;
+  /* box-sizing: border-box; */
+  box-sizing : inherit; /* best practice */
+}
+
+html
+{
+  /* font-size:10px;  bad practice*/
+  font-size:62.5%; /* good practice : definition d'un 1rem */
+}
+
+
+body {
+  box-sizing:border-box;
+}

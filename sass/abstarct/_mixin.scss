@@ -1,0 +1,49 @@
+@mixin btn {
+
+    &:link,&:visited
+    {
+      text-transform: uppercase;
+  text-decoration: none;
+  /* padding : 15px 40px;*/
+  padding: 1.5rem 4rem;
+  display:inline-block;
+  /*border-radius: 100px;*/
+  border-radius:10rem;
+  transition: all .2s;  /*animation bouton*/
+  position : relative; /* on le met en position relative pour cacher l'element fils ::after*/
+  /*font-size:1.6rem;*/
+    }
+
+    &:hover{
+
+      transform: translateY(-3px);
+      /* box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* l'ombrage lors du hover*/
+      box-shadow: 0 1rem 2rem rgba($color-noir,0.2);
+      
+    }
+
+    &:active{
+
+      transform: translateY(-1px);
+
+      /*box-shadow: 0 5px 10px rgba(0,0,0,0.2); /* l'ombrage lors du clic*/
+      box-shadow: 0 .5rem 1rem rgba($color-noir,0.2);
+    }
+
+
+}
+
+@mixin clearfix
+{
+  &::after
+  {
+    content: "";
+    display: table;
+    clear:both;
+  }
+}
+
+@mixin col
+{
+  margin-right:$grid-horizontal;
+}
